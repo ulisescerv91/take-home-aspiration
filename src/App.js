@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {ApolloProvider} from "@apollo/client";
+import {client} from './client'
+import Home from './pages/Home';
+
+//const API_KEY='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';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Home/>
+      </div>
+    </ApolloProvider>
   );
 }
 
