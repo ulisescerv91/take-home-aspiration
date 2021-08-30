@@ -8,7 +8,7 @@ The app show  how many
 [stargazers](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#stargazerconnection) each topic has. A click on a topic  display the topics related to that topic,
 and how many stargazers they have. And so forth.
 
-![img description](TakeHome.jpg)
+![img description](TakeHome.JPG)
 
 
 
