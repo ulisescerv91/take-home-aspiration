@@ -2,11 +2,9 @@ import { gql } from '@apollo/client'
 
 export const DATA_GITHUB = gql`
     query getTopics($topic:String!){
-        topic(name:$topic){    
+        topic(name:$topic){  
             name,
-            id,
-            relatedTopics{
-                id,
+            relatedTopics(first:10){
                 name,
                 stargazers{
                     totalCount
