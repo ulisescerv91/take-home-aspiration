@@ -3,9 +3,6 @@ import {ApolloProvider} from "@apollo/client";
 import {client} from './client'
 import Home from './pages/Home/Home';
 
-//const API_KEY='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';
-
-
 function App() {
   return (
     <ApolloProvider client={client}>

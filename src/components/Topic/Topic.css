@@ -41,8 +41,6 @@
     opacity: 1;
 }
 
-
-
 .Topic__name{
     font-size: 2em;
 }
@@ -62,7 +60,6 @@
     border-radius: 50%;
     background-color: lightgray;
     transition: transform 0.25s linear;
-
 }
 .Topic:hover .Topic__circle{
     background-color: white;

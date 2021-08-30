@@ -2,34 +2,34 @@ import React, { useState, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import { DATA_GITHUB } from '../../GraphQL/Queries'
 import Topic from '../../components/Topic/Topic'
-import './Home.css'
 import Search from '../../components/Search/Search'
+import './Home.css'
 
 export default function Home() {
 
-    const [searchTopic, setSeachTopic] = useState('react')
+    const [topic, setTopic] = useState('react')
 
-    const {data, loading} = useQuery(DATA_GITHUB,{variables:{topic:searchTopic}})
+    const {data, loading} = useQuery(DATA_GITHUB,{variables:{topic:topic}})//Get data from github api
     
-    const handleClick = (newSearchTopic) => {
-        setSeachTopic(newSearchTopic)
+    const handleClick = (newTopic) => {
+        setTopic(newTopic)
     }
-    const handleSubmit = (e,text) =>{
+
+    const handleSubmit = (e,topic) =>{
         e.preventDefault();
-        if(text.length > 0)
-            setSeachTopic(text)        
+        if(topic.length > 0)
+            setTopic(topic)        
     }
 
     return (
         <div className='Home'>
             <div className="Home__info">
                 <h1>GITHUB API</h1>
-                <p>All Related Topics From <span className='Home__info__keyword'>{searchTopic}</span></p>               
+                <p>All Related Topics From <span className='Home__info__keyword'>{topic}</span></p>               
             </div>
 
             <Search handleSubmit={handleSubmit}/>
             
-
             {
                 loading? 
                     <h4>loading...</h4>
@@ -46,8 +46,7 @@ export default function Home() {
                             }
                         </div>
                         : 
-                        <h4>Please Try leter... </h4>
-                        
+                        <h4>Facing some issues - Please Try leter... </h4>                       
             }
         </div>
     )
