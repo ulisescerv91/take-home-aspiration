@@ -10,10 +10,16 @@ and how many stargazers they have. And so forth.
 
 ![img description](TakeHome.JPG)
 
+ 
+## Settings
+---
+Open the the .env file and add your API Key 
+### `REACT_APP_TOKEN=YOUR_APY_KEY`
 
 
 ## Available Scripts
 ---
+
 
 In the project directory, you can run:
 
